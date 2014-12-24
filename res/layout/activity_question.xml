@@ -1,16 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="hk.ust.crowdsourcing.MainActivity" >
+    android:layout_height="match_parent" >
 
-    <TextView
+    <EditText
+        android:id="@+id/question_content"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+        android:layout_alignBaseline="@+id/question_label"
+        android:layout_alignBottom="@+id/question_label"
+        android:layout_marginLeft="40dp"
+        android:layout_toRightOf="@+id/question_label"
+        android:ems="10" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/question_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="50dp"
+        android:text="@string/question_label" />
+
+    <TextView
+        android:id="@+id/given_credit_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/question_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="44dp"
+        android:text="@string/given_credit_label" />
+
+    <EditText
+        android:id="@+id/given_credit_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/given_credit_label"
+        android:layout_alignLeft="@+id/question_content"
+        android:ems="10"
+        android:hint="@string/given_credit_hint"
+        android:inputType="numberDecimal" />
+
+    <TextView
+        android:id="@+id/count_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/given_credit_label"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="46dp"
+        android:text="@string/count_label" />
+
+    <EditText
+        android:id="@+id/count_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/count_label"
+        android:layout_alignLeft="@+id/question_content"
+        android:layout_toRightOf="@+id/count_label"
+        android:ems="10"
+        android:hint="@string/count_hint"
+        android:inputType="numberDecimal" />
+
+    <TextView
+        android:id="@+id/period_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/count_label"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="47dp"
+        android:text="@string/period_label" />
+
+    <EditText
+        android:id="@+id/period_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/period_label"
+        android:layout_alignLeft="@+id/question_content"
+        android:ems="10"
+        android:hint="@string/period_hint"
+        android:inputType="numberDecimal" />
+
+    <Button
+        android:id="@+id/question_submit_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/period_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="76dp"
+        android:text="@string/submit_button" />
 
 </RelativeLayout>

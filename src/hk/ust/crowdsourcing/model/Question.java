@@ -12,8 +12,6 @@ public class Question implements Serializable {
 	
 	private String content;
 	private int credit;
-	private int target;
-	private int expireTime;
 	private Answer[] targetAnswers;
 	
 	private String finalAnswer;
@@ -43,18 +41,7 @@ public class Question implements Serializable {
 	public void setCredit(int credit) {
 		this.credit = credit;
 	}
-	public int getTarget() {
-		return target;
-	}
-	public void setTarget(int target) {
-		this.target = target;
-	}
-	public int getExpireTime() {
-		return expireTime;
-	}
-	public void setExpireTime(int expireTime) {
-		this.expireTime = expireTime;
-	}
+	
 	public Answer[] getTargetAnswers() {
 		return targetAnswers;
 	}
